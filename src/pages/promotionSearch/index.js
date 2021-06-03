@@ -1,21 +1,19 @@
-import PromotionCard from '../../components/PromotionCard';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
-const promotion = {
-  "id": 1,
-  "title": "Kit Notebook Acer Aspire 3 + Mochila Green, A315-41-R790, AMD Ryzen 3 2200U Dual Core",
-  "price": 1799,
-  "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem_url/2631517face1861bc4f46ae154d387de.png",
-  "url": "https://www.amazon.com.br/Notebook-Acer-Mochila-A315-41-R790-Mem%C3%B3ria/dp/B07YDWLV7S/ref=as_li_ss_tl?ie=UTF8&linkCode=sl1&tag=gatry0b-20&linkId=e4a1146599e36741a720a6a952cbc328&language=pt_BR",
-  "comments": [
-    {
-      "id": 1,
-      "comment": "TELA HD"
-    }
-  ]
-};
+import PromotionCard from '../../components/PromotionCard';
 
 
 const PromotionSearch = () => {
+  const [promotions, setPromotions] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get('http://localhost:5000/promotions?_embed=comments');
+      setPromotions(response.data);
+    })()
+  }, [])
+
   return (
     <div 
       style={{
@@ -23,7 +21,9 @@ const PromotionSearch = () => {
         margin: '30px auto'
       }}  
     >
-      <PromotionCard promotion={promotion} />
+      {promotions.map((promotion) => (
+        <PromotionCard promotion={promotion} />
+      ))}
     </div>
   );
 };
