@@ -1,15 +1,15 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import PromotionSearch from './promotionSearch';
-import PromotionForm from './promotionForm';
+import Search from './Search';
+import Form from './Form';
 
 const Routes = () => {
   return (
     <Router>
       <Switch>
-        <Route path="/" exact component={PromotionSearch} />
-        <Route path="/create" component={PromotionForm} />
-        <Route path="/edit/:id" component={PromotionForm} />
+        <Route path="/" exact component={Search} />
+        <Route path="/create" component={Form} />
+        <Route path="/edit/:id" component={Form} />
       </Switch>
     </Router>
   );

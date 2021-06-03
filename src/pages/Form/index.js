@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 
 
-const PromotionForm = () => {
+const Form = () => {
   const { id } = useParams();
 
   return (
@@ -12,4 +12,4 @@ const PromotionForm = () => {
   );
 };
 
-export default PromotionForm;
+export default Form;
