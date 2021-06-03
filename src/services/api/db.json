@@ -24,9 +24,16 @@
     {
       "id": 4,
       "title": "Fone de Ouvido Jaybird Run XT Sport Bluetooth, Cinza",
-      "price": 699.90,
+      "price": 699.9,
       "url": "",
       "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem_url/9c4b176eb52bb4877e853cf36393d8fc.jpg"
+    },
+    {
+      "title": "Soundbar JBL Cinema SB130, 2.0 Canais, Bluetooth, Subwoofer com Fio, 55W RMS - JBLSB130BLKBR",
+      "url": "https://tidd.ly/3fO1qfh",
+      "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem_url/ab605abe91a32e0c0b29af27595ebe24.png",
+      "price": "100",
+      "id": 5
     }
   ],
   "comments": [
