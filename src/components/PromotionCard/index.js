@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 
 const PromotionCard = ({ promotion }) => {
   return (
-    <div className={styles.promotionCard}>
+    <div key={promotion.id} className={styles.promotionCard}>
       <img src={promotion.imageUrl} alt={promotion.title}/>
         <div>
           <h1>{promotion.title}</h1>

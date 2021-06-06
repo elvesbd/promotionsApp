@@ -31,10 +31,10 @@ export function PromotionSearch() {
       </header>
 
       <input 
-      type="search" 
-      placeholder="Pesquisar"
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
+        type="search" 
+        placeholder="Pesquisar"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
       />
 
       <PromotionList promotions={promotions} loading={!promotions.length}/>
