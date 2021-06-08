@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from 'react-router-dom'
 
-import axios from 'axios';
 import useApi from '../../utils/useApi';
 import { PromotionList } from '../PromotionList'
 
@@ -11,6 +10,7 @@ import styles from './styles.module.scss';
 export function PromotionSearch() {
   const [search, setSearch] = useState('');
   const [load, setLoad] = useApi({
+    debounceDelay: 300,
     url: '/promotions',
     method: 'get',
     params: {
@@ -20,19 +20,16 @@ export function PromotionSearch() {
       title_like: search || undefined,
     },
   });
-  console.log(setLoad.data);
+  const mountRef = useRef(null);
 
   useEffect(() => {
-    load();
-    /* const params = {};
-    if (search) {
-      params.title_like = search;
-    }
+    load({
+      debounced: mountRef.current,
+    });
 
-    (async () => {
-      const response = await axios.get('http://localhost:5000/promotions?_embed=comments&_order=desc&_sort=id', { params });
-      setPromotions(response.data);
-    })() */
+    if (!mountRef.current) {
+      mountRef.current = true;
+    }
   }, [search]);
 
   return (
