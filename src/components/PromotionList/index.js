@@ -1,9 +1,13 @@
+import { useState } from "react";
 import PromotionCard from "../PromotionCard";
+import { Modal } from '../UI/Modal';
 
 import styles from './styles.module.scss';
 
 
 export function PromotionList({ loading, err, promotions }) {
+  const [promotionId, setPromotionId] = useState(null);
+
   if (err) {
     return <div>Algo Errado</div>
 
@@ -17,8 +21,17 @@ export function PromotionList({ loading, err, promotions }) {
     return (
       <div className={styles.promotionList}>
         {promotions.map((promotion) => (
-          <PromotionCard promotion={promotion} />
+          <PromotionCard 
+            promotion={promotion} 
+            onClickComments={() => setPromotionId(promotion.id)}
+          />
         ))}
+        <Modal 
+          isOpen={Boolean(promotionId)} 
+          onCloseModal={() => setPromotionId(null)}
+        >
+          <h1>Comentários</h1>
+        </Modal>
       </div>
     );
   }
