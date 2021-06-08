@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 
-import axios from 'axios';
 import useApi from '../../utils/useApi';
 
 import styles from './styles.module.scss';
