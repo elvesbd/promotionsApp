@@ -1,6 +1,6 @@
 import { useState } from "react";
-import PromotionCard from "../PromotionCard";
-import { Modal } from '../UI/Modal';
+import { PromotionCard } from "../PromotionCard";
+import { PromotionModal } from '../PromotionModal';
 
 import styles from './styles.module.scss';
 
@@ -26,12 +26,12 @@ export function PromotionList({ loading, err, promotions }) {
             onClickComments={() => setPromotionId(promotion.id)}
           />
         ))}
-        <Modal 
-          isOpen={Boolean(promotionId)} 
-          onCloseModal={() => setPromotionId(null)}
-        >
-          <h1>Comentários</h1>
-        </Modal>
+        {promotionId && (
+          <PromotionModal 
+            promotionId={promotionId} 
+            onCloseModal={() => setPromotionId(null)}
+          />
+        )}
       </div>
     );
   }

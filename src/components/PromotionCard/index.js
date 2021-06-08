@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from './styles.module.scss';
 
 
-const PromotionCard = ({ promotion, onClickComments }) => {
+export function PromotionCard({ promotion, onClickComments }) {
   return (
     <div key={promotion.id} className={styles.promotionCard}>
       <img src={promotion.imageUrl} alt={promotion.title}/>
@@ -38,5 +38,3 @@ const PromotionCard = ({ promotion, onClickComments }) => {
     </div>
   );
 }
-  
-export default PromotionCard;
