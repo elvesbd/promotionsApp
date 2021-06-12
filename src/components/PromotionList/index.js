@@ -11,7 +11,7 @@ export function PromotionList({ loading, err, promotions }) {
   if (err) {
     return <div>Algo Errado</div>
 
-  } else if (loading || !promotions) {
+  } else if (promotions === null) {
     return <div>Carregando</div>
 
   } else if (promotions.length === 0) {
@@ -26,6 +26,9 @@ export function PromotionList({ loading, err, promotions }) {
             onClickComments={() => setPromotionId(promotion.id)}
           />
         ))}
+        {loading && (
+          <div>Carregando mais promoções...</div>
+        )}
         {promotionId && (
           <PromotionModal 
             promotionId={promotionId} 
