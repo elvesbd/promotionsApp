@@ -84,6 +84,93 @@
     },
     {
       "id": 10
+    },
+    {
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "Hello world!",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "promotionId": 2,
+      "comment": "Deu certo",
+      "parentId": 2,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "promotionId": 5,
+      "comment": "Promoção",
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "userId": 1,
+      "promotionId": 5,
+      "comment": "Response teste",
+      "parentId": 14,
+      "id": 16
+    },
+    {
+      "userId": 1,
+      "promotionId": 5,
+      "comment": "Children response",
+      "parentId": 16,
+      "id": 17
+    },
+    {
+      "userId": 1,
+      "promotionId": 5,
+      "comment": "",
+      "id": 18
+    },
+    {
+      "id": 19
+    },
+    {
+      "userId": 1,
+      "promotionId": 1,
+      "comment": "oi",
+      "parentId": 1,
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "promotionId": 1,
+      "comment": "Vc esta certo",
+      "parentId": 20,
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "promotionId": 4,
+      "comment": "HI",
+      "id": 22
+    },
+    {
+      "id": 23
+    },
+    {
+      "userId": 1,
+      "promotionId": 1,
+      "comment": "Teste",
+      "parentId": 6,
+      "id": 24
+    },
+    {
+      "userId": 1,
+      "promotionId": 4,
+      "comment": "teste",
+      "id": 25
+    },
+    {
+      "id": 26
     }
   ],
   "users": [

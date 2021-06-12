@@ -27,11 +27,11 @@ export function PromotionModal({ promotionId, onCloseModal }) {
     load();
   }, []);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
 
     try {
-      sendComment({
+      await sendComment({
         data: {
           userId: 1,
           promotionId,
@@ -39,10 +39,22 @@ export function PromotionModal({ promotionId, onCloseModal }) {
         }
       });
       sendComment('');
-      load();
+      load({ quietly: true });
     } catch (err) {
 
     }
+  };
+
+  async function sendAnswer(textComment, parentId) {
+    await sendComment({
+      data: {
+        userId: 1,
+        promotionId,
+        comment: textComment,
+        parentId
+      }
+    });
+    load({ quietly: true });
   };
 
   return (
@@ -52,12 +64,13 @@ export function PromotionModal({ promotionId, onCloseModal }) {
           placeholder="Comentar..."
           onChange={(e) => setComment(e.target.value)}
           value={comment}
+          disabled={setSendComment.loading}
         />
         <button type="submit" disabled={setSendComment.loading}>
           {setSendComment.loading ? 'Enviando' : 'Enviar'}
         </button>
       </form>
-      <CommentsTree comments={setLoad.data}/>
+      <CommentsTree comments={setLoad.data} sendComment={sendAnswer}/>
     </Modal>
   );
 };
