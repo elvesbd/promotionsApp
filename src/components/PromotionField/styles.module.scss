@@ -1,0 +1,25 @@
+label {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+input {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background: #fff;
+  height: 36px;
+  padding: 0 10px;
+
+  
+}
+.errorInput {
+  border-color: #c0392b;
+}
+
+.errorMessage {
+  color: #c0392b;
+  font-size: 14px;
+}
