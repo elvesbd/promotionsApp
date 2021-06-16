@@ -16,23 +16,24 @@ export function PromotionCard({ promotion, onClickComments }) {
               "{promotion.comments.length > 0 ? promotion.comments[0].comment : ''}"
             </div>
         
-            <button 
-              className={styles.promotionCardCommentsCount}
-              onClick={onClickComments}
-            >
-              {promotion.comments.length}{' '} 
-              {promotion.comments.length > 1 ? 'Comentários' : 'Comentário'}
-            </button>
+            <div>
+              <a onClick={onClickComments}>
+                {promotion.comments.length}{' '} 
+                {promotion.comments.length > 1 ? 'Comentários' : 'Comentário'}
+              </a>
 
-            <button 
-              href={promotion.url} 
-              target="_blank" 
-              rel="noopener noreferrer"
-            >
-              IR PARA O SITE
-            </button>
+              <button
+                href={promotion.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                IR PARA O SITE
+              </button>
 
-            <Link to={`/edit/${promotion.id}`}>Editar</Link>
+              <Link className={styles.linkEdit} to={`/edit/${promotion.id}`}>
+                Editar
+              </Link>
+            </div>
           </footer>
         </div>
     </div>

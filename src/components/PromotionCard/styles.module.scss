@@ -30,26 +30,52 @@
   footer {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    button {
-      border: 1px solid #3498db;
-      background: #3498db;
-      color: #fff;
+    a {
+      background: unset;
+      border: unset;
+      color: #3498db;
       border-radius: 4px;
       text-decoration: none;
       padding: 8px 10px;
       white-space: nowrap;
+      font-size: 14px;
+    }
 
-      transition: filter(0.2s);
+    button {
+      background: unset;
+      border: 1px solid #3498db;
+      color: #3498db;
+      border-radius: 4px;
+      text-decoration: none;
+      padding: 8px 10px;
+      margin-right: 10px;
+      white-space: nowrap;
   
       &:hover {
-        filter: brightness(0.9);
         cursor: pointer;
+        background: #3498db;
+        color: #fff;
+        transition: ease-in 0.3s;
       }
     }
 
-    a {
-      margin-left: 10px;
+    .linkEdit {
+      background: unset;
+      border: 1px solid #3498db;
+      color: #3498db;
+      border-radius: 4px;
+      text-decoration: none;
+      padding: 8px 10px;
+      white-space: nowrap;
+  
+      &:hover {
+        cursor: pointer;
+        background: #3498db;
+        color: #fff;
+        transition: ease-in 0.3s;
+      }
     }
   }
 
@@ -60,16 +86,5 @@
     overflow: hidden;
     color: #95a5a6;
     font-weight: 700;
-  }
-
-  .promotionCardCommentsCount {
-    max-width: 345px;
-    margin-left: auto;
-    margin-right: 24px;
-    color: #3498db;
-    border: none;
-    background: none;
-    cursor: pointer;
-    white-space: nowrap;
   }
 }
