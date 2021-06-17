@@ -8,20 +8,6 @@
       "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem_url/2631517face1861bc4f46ae154d387de.png"
     },
     {
-      "id": 2,
-      "title": "Faqueiro Tramontina Laguna Inox - 100 Peças",
-      "price": 246.05,
-      "url": "",
-      "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem/0324bf9ad81ccbc5a8e22a1a41015649.png"
-    },
-    {
-      "id": 3,
-      "title": "Tênis West Coast Marron",
-      "price": 119.99,
-      "url": "",
-      "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem/fe0a1e4ddcbd8f9a99a05908b6d29ea2.png"
-    },
-    {
       "id": 4,
       "title": "Fone de Ouvido Jaybird Run XT Sport Bluetooth, Cinza",
       "price": 699.9,
@@ -34,13 +20,6 @@
       "imageUrl": "https://cdn.gatry.com/gatry-static/promocao/imagem_url/ab605abe91a32e0c0b29af27595ebe24.png",
       "price": "25",
       "id": 5
-    },
-    {
-      "title": "Notebook Lenovo Ultrafino ideapad S145 i5-1035G1, 8GB 1TB Windows 10 15.6\" Dolby Audio Design Leve e Compacto, Prata",
-      "url": "https://www.amazon.com.br/Notebook-Lenovo-Ultrafino-ideapad-S145/dp/B088CFPCV7?ref_=Oct_s9_apbd_otopr_hd_bw_bHrUqLT&pf_rd_r=3MK8F1BP64XESX57PSTW&pf_rd_p=ae2a6e14-5e57-57d1-a7c7-38f2deae6a08&pf_rd_s=merchandised-search-10&pf_rd_t=BROWSE&pf_rd_i=16364755011",
-      "imageUrl": "https://images-na.ssl-images-amazon.com/images/I/413V3QwQ2sL._AC_SY450_.jpg",
-      "price": 200,
-      "id": 6
     }
   ],
   "comments": [],

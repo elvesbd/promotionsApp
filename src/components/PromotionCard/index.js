@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
+import { BiTrash } from 'react-icons/bi';
 
 import styles from './styles.module.scss';
 
 
-export function PromotionCard({ promotion, onClickComments }) {
+export function PromotionCard({ promotion, onClickComments, onClickDelete }) {
   return (
     <div key={promotion.id} className={styles.promotionCard}>
       <img src={promotion.imageUrl} alt={promotion.title}/>
@@ -35,6 +36,14 @@ export function PromotionCard({ promotion, onClickComments }) {
               </Link>
             </div>
           </footer>
+
+          <button 
+            className={styles.deletedButton} 
+            type="button" 
+            onClick={onClickDelete}
+          >
+            <BiTrash />
+          </button>
         </div>
     </div>
   );
